@@ -72,45 +72,33 @@ git clone <your-repo-url>
 cd FINALPROJ
 
 2. Create virtual environment
-bash
-Copy
-Edit
 python -m venv .venv
+
 3. Activate virtual environment
 On Windows:
 
-bash
-Copy
-Edit
 .venv\Scripts\activate
+
 On Linux/Mac:
 
-bash
-Copy
-Edit
 source .venv/bin/activate
+
 4. Install dependencies
-bash
-Copy
-Edit
+
 pip install -r requirements.txt
+
 5. Add your AviationStack API key
+
 Rename .env.txt to .env
-
 Inside .env, add:
-
-ini
-Copy
-Edit
 AVIATION_API_KEY=your_api_key_here
+
 6. Apply migrations and run server
-bash
-Copy
-Edit
+
 python manage.py migrate
 python manage.py runserver
-Open browser at: http://127.0.0.1:8000/
 
+Open browser at: http://127.0.0.1:8000/
 
 🖼️ Screenshots
 🏠 Home Page
