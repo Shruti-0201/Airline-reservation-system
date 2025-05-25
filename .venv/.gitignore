@@ -1,0 +1,3 @@
+#This ensures the API key is never uploaded 
+
+.env   

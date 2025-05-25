@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'images/home.jpg' %}");
+            background-size: cover;
+            height: 100vh;
+
+        }
+
+        .container {
+            text-align: center;
+            padding-top: 150px;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100vh;
+        }
+
+        h1 {
+            color: white;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Airline Reservation System</h1>
+
+        <a href="{% url 'search_form' %}" class="btn">Search Flights</a>
+        <a href="{% url 'popular_routes' %}" class="btn">Popular Routes</a>
+        <a href="{% url 'airport_info' %}" class="btn">Airport Info</a>
+        <a href="{% url 'travel_tip' %}" class="btn">Travel Tips</a>
+
+    </div>
+</body>
+
+</html>

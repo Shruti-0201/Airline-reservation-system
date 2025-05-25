@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f1f1;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        .flight-card {
+            background: #fff;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        .flight-card p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .no-data {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Flight Results from {{ source }} to {{ destination }}</h2>
+{% if flights %}
+    {% for flight in flights %}
+    <div class="flight-card">
+        <p><strong>Flight Number:</strong> {{ flight.flight.iata }}</p>
+        <p><strong>Departure Airport:</strong> {{ flight.departure.airport }}</p>
+        <p><strong>Scheduled Departure:</strong> {{ flight.departure.scheduled }}</p>
+        <p><strong>Arrival Airport:</strong> {{ flight.arrival.airport }}</p>
+        <p><strong>Status:</strong> {{ flight.status|capfirst }}</p>
+    </div>
+    {% endfor %}
+{% else %}
+<div class="no-data">
+    <p>No flights found for this route.</p>
+</div>
+{% endif %}
+<center>
+<a class="back-link" href="{% url 'home' %}">← Back to Home</a>
+</center>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airport Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f7f7f7;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    {% if airport %}
+    <div class="card">
+        <h2>Airport Information</h2>
+        <p><strong>Name:</strong> {{ airport.name }}</p>
+        <p><strong>City:</strong> {{ airport.city }}</p>
+        <p><strong>Country:</strong> {{ airport.country }}</p>
+        <p><strong>IATA Code:</strong> {{ airport.code }}</p>
+        <p><strong>Timezone:</strong> {{ airport.timezone }}</p>
+    </div>
+    {% else %}
+    <p style="text-align:center; color: gray;">No airport information found.</p>
+    {% endif %}
+
+    <a class="back-link" href="{% url 'home' %}">← Back to Home</a>
+
+</body>
+</html>

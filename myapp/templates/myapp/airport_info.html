@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Airport</title>
+    <style>
+        body {
+            background-image: url("{% static 'images/airport.jpg' %}");
+            background-size: cover;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: black;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select an Airport</h2>
+           <form method="POST" action="{% url 'airport_info' %}">
+            {% csrf_token %}
+            <label for="airport">Choose Airport:</label>
+            <select name="airport_name" id="airport">
+                {% for airport in airports %}
+                    <option value="{{ airport.name }}">{{ airport.name }} ({{ airport.code }})</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Get Info</button>
+        </form>
+    </div>
+</body>
+</html>

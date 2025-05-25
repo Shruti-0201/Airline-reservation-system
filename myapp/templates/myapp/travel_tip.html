@@ -1,0 +1,93 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Tips</title>
+    <style>
+        body {
+            background-image: url("{% static 'images/travel.jpeg' %}");
+            background-size: cover;
+            height: 100vh;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .tip {
+            margin-bottom: 15px;
+        }
+        .tip h3 {
+            color: #0056b3;
+            margin-bottom: 5px;
+        }
+        .tip p {
+            margin: 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Tips</h1>
+
+        <div class="tip">
+            <h3>1. Pack Light</h3>
+            <p>Take only what you need. This makes moving around easier and avoids extra baggage charges.</p>
+        </div>
+
+        <div class="tip">
+            <h3>2. Keep Important Documents Safe</h3>
+            <p>Carry copies of your passport, ID, and tickets in a different place than the originals.</p>
+        </div>
+
+        <div class="tip">
+            <h3>3. Stay Hydrated</h3>
+            <p>Drink plenty of water, especially during flights and in hot climates.</p>
+        </div>
+
+        <div class="tip">
+            <h3>4. Learn Local Customs</h3>
+            <p>Understanding traditions and etiquette helps you connect better with locals.</p>
+        </div>
+
+        <div class="tip">
+            <h3>5. Keep Emergency Contacts Handy</h3>
+            <p>Save numbers for local emergency services, your embassy, and close family members.</p>
+        </div>
+
+        <div class="tip">
+            <h3>6. Carry a Power Bank</h3>
+            <p>Ensure your phone and devices are always charged, especially during long journeys.</p>
+        </div>
+
+        <div class="tip">
+            <h3>7. Use a Travel Wallet</h3>
+            <p>Store your passport, cards, currency, and tickets in one secure place.</p>
+        </div>
+
+        <div class="tip">
+            <h3>8. Stay Alert</h3>
+            <p>Be aware of your surroundings and keep an eye on your belongings at all times.</p>
+        </div>
+    </div>
+    <center>
+    <a class="back-link" href="{% url 'home' %}">← Back to Home</a>
+    <br><br>
+    </center>
+</body>
+</html>
