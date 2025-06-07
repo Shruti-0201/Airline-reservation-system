@@ -13,6 +13,13 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from decouple import config
 
+#login page redirect
+LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_REDIRECT_URL = '/home/'
+
+
+
 API_KEY = config('AVIATION_API_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

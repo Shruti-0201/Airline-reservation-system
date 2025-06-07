@@ -1,10 +1,30 @@
+
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, logout
+from django.contrib import messages  # to display thank you/welcome/logout msg
+
 from datetime import datetime
 from django.shortcuts import render
 from myapp.models import Airport
 from .utils import get_flight_data ,city_to_iata
 
+#home page view
 def home(request):
     return render(request, 'myapp/home.html')
+
+# register view
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Account created successfully!')
+            return redirect('login')  # Or 'home'
+    else:
+        form = UserCreationForm()
+    return render(request, 'myapp/register.html', {'form': form})
+
 
 def search_form(request):
     return render(request, 'myapp/flights.html')

@@ -114,19 +114,25 @@ Open browser at: http://127.0.0.1:8000/
 
 🖼️ Screenshots
 🏠 Home Page
-![Homepage](myapp/static/images/home.jpeg)
+![Homepage](docs/images/homepage1.png)
 
-✈️ Search Results
-![Search_flightpage](myapp/static/images/search_form.jpeg)
+✈️ Search Flights
+![Search_flightpage](docs/images/search_form.png)
+
+✈️ Search Flights results
+![Search_flight_resultpage](docs/images/flights_result.png)
 
 📍 Airport Info
-![Airportpage](myapp/static/images/airport.jpg)
+![Airportpage](docs/images/airport_info.png)
+
+📍 Airport Info result
+![Airport_info_result_page](docs/images/airport_result.png)
 
 📌 Popular Routes
-![Popular_routespage](myapp/static/images/popular_routes.jpeg)
+![Popular_routespage](docs/images/popular_routes.png)
 
 📝 Travel Tips
-![Travel_tippage](myapp/static/images/travel_tip.jpeg)
+![Travel_tippage](docs/images/travel_tip.png)
 
 ---
 
