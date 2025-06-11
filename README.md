@@ -16,10 +16,9 @@ FINALPROJ/
 │
 ├── finalproj/                 # Main Django project folder
 │   └── ... (settings.py, urls.py etc.)
-|__ docs/
-|    |___images/
-|          
-│
+│___ docs/
+|     |___images/
+|
 ├── myapp/                     # Django app
 │   ├── __pycache__/
 │   ├── migrations/
@@ -119,44 +118,23 @@ Open browser at: http://127.0.0.1:8000/
 🏠 Home Page
 ![Homepage](docs/images/homepage1.png)
 
-![homepage1](https://github.com/user-attachments/assets/f8454803-5722-49bb-a7bd-8e3b925336d2)
-
-
 ✈️ Search Flights
 ![Search_flightpage](docs/images/search_form.png)
-
-![search_form](https://github.com/user-attachments/assets/12cd2549-9e42-42fe-a94d-2d817e9e4bd0)
-
 
 ✈️ Search Flights results
 ![Search_flight_resultpage](docs/images/flights_result.png)
 
-![flights_result](https://github.com/user-attachments/assets/1d002961-55fb-4167-8226-9722e4d7dbf6)
-
-
 📍 Airport Info
 ![Airportpage](docs/images/airport_info.png)
-
-![airport_info](https://github.com/user-attachments/assets/ec9c482b-9431-4fc3-b806-7e024435e7e6)
-
 
 📍 Airport Info result
 ![Airport_info_result_page](docs/images/airport_result.png)
 
-![airport_result](https://github.com/user-attachments/assets/2a03dba4-ddb1-44b8-a35e-91c6865d2d77)
-
-
 📌 Popular Routes
 ![Popular_routespage](docs/images/popular_routes.png)
 
-![popular_routes](https://github.com/user-attachments/assets/5ebf2d20-1088-4a25-aed8-9f608b180135)
-
-
 📝 Travel Tips
 ![Travel_tippage](docs/images/travel_tip.png)
-
-![travel_tip](https://github.com/user-attachments/assets/14dd20dd-9ae1-4a10-b718-f475cd86fff2)
-
 
 ---
 
