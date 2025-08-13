@@ -72,69 +72,35 @@ FINALPROJ/
 ```bash
 git clone <your-repo-url>
 cd FINALPROJ
+_ _ _
 
-2. Create virtual environment
-bash
-Copy
-Edit
+### 2. Create virtual environment
 python -m venv .venv
+_ _ _
+
 3. Activate virtual environment
-On Windows:
+- On Windows:
+ .venv\Scripts\activate
+_ _ _
 
-bash
-Copy
-Edit
-.venv\Scripts\activate
-On Linux/Mac:
+- On Linux/Mac:
+ source .venv/bin/activate
+_ _ _
 
-bash
-Copy
-Edit
-source .venv/bin/activate
 4. Install dependencies
-bash
-Copy
-Edit
 pip install -r requirements.txt
+_ _ _
+
 5. Add your AviationStack API key
 Rename .env.txt to .env
-
 Inside .env, add:
-
-ini
-Copy
-Edit
 AVIATION_API_KEY=your_api_key_here
+_ _ _
+
 6. Apply migrations and run server
-bash
-Copy
-Edit
 python manage.py migrate
 python manage.py runserver
 Open browser at: http://127.0.0.1:8000/
-
-
-🖼️ Screenshots
-🏠 Home Page
-![Homepage](docs/images/homepage1.png)
-
-✈️ Search Flights
-![Search_flightpage](docs/images/search_form.png)
-
-✈️ Search Flights results
-![Search_flight_resultpage](docs/images/flights_result.png)
-
-📍 Airport Info
-![Airportpage](docs/images/airport_info.png)
-
-📍 Airport Info result
-![Airport_info_result_page](docs/images/airport_result.png)
-
-📌 Popular Routes
-![Popular_routespage](docs/images/popular_routes.png)
-
-📝 Travel Tips
-![Travel_tippage](docs/images/travel_tip.png)
 
 ---
 
